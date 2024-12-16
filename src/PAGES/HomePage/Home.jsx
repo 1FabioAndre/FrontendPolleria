@@ -6,8 +6,10 @@ import HomeWorker from "./HomeWorker";
 
 const Home = () => {
   const { user } = useAuth(); 
+  console.log("user", user);
 
   if (!user) {
+    console.log("usuario no encontrado");
     return <div>Cargando...</div>; 
   }
   const userRole = user.role;
